@@ -1,9 +1,6 @@
-*,
-*::after,
-*::before {
+* {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
 }
  
 html{
@@ -17,16 +14,21 @@ body {
   background-color: #bdbdbd;
   padding: 3rem;
   box-sizing: border-box;
-  background-image: linear-gradient(to right bottom, rgba(135, 191, 255, .7), rgba(38, 103, 255, .7)), url(img/background\ image.jpg);
+  background-image: linear-gradient(to right bottom, rgb(135, 191, 255, .7), rgb(38, 103, 255, .7)), url(img/background\ image.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100vh;
+  width: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card {
   height: 60rem;
   width: 40rem;
   display: flex;
-  margin: 7% auto;
   position: relative;
   perspective: 150rem;
 }
