@@ -1,0 +1,125 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+ 
+html{
+  font-size: 10px;
+}
+
+body {
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  background-color: #bdbdbd;
+  padding: 3rem;
+  box-sizing: border-box;
+  background-image: linear-gradient(to right bottom, rgba(135, 191, 255, .7), rgba(38, 103, 255, .7)), url(img/background\ image.jpg);
+  background-size: cover;
+}
+
+.card {
+  height: 60rem;
+  width: 40rem;
+  display: flex;
+  margin: 7% auto;
+  position: relative;
+  perspective: 150rem;
+}
+
+.card:hover .front {
+  transform: rotateY(-180deg);
+}
+
+.front {
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all .8s ease;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+
+.back {
+  background-image: linear-gradient(to right bottom, rgb(135, 191, 255), rgb(38, 103, 255));
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition: all .8s ease;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.card:hover .back {
+  transform: rotateY(0);
+}
+
+.card:active .front {
+  transform: rotateY(0);
+}
+
+.card:active .back {
+  transform: rotateY(180deg);
+}
+
+.card-picture {
+  background-image: linear-gradient(to right bottom, #87bfff, #2667ff), url(img/front.jpg);
+  background-size: cover;
+  height: 50%;
+  background-blend-mode: screen;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+.card-holder {
+  font-size: 2.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: right;
+  color: #fff;
+  position: absolute;
+  top: 19rem;
+  right: 2rem;
+  width: 60%;
+}
+
+.card-holder-name {
+  padding: 1rem 1.5rem;
+  box-decoration-break: clone;
+  background-image: linear-gradient(to right bottom, #87bfff, #2667ff);
+}
+
+.owner-details {
+  padding: 3rem;
+}
+
+.owner-details ul {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+  color: black;
+}
+
+.owner-details li {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.owner-details li:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+.card-picture-back {
+  background-image: url(img/back.jpg);
+  background-size: cover;
+  height: 100%;
+}
